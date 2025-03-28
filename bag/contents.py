@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 def bag_contents(request):
+    print("Bag contents context processor called")
 
     bag_items = []
     total = 0

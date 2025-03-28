@@ -1,0 +1,17 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const quantityInput = document.querySelector('.quantity-input');
+        const incrementButton = document.querySelector('.increment-quantity');
+        const decrementButton = document.querySelector('.decrement-quantity');
+
+        if (quantityInput && incrementButton && decrementButton) {
+            incrementButton.addEventListener('click', function () {
+                quantityInput.stepUp();
+            });
+
+            decrementButton.addEventListener('click', function () {
+                quantityInput.stepDown();
+            });
+        }
+    });
+</script>

@@ -3,7 +3,10 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def bag_contents(request):
+    print(f"Bag contents: {request.session.get('bag', {})}")  # Moved inside the function
+
     print("Bag contents context processor called")
 
     bag_items = []
